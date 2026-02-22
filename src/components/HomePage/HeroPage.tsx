@@ -5,12 +5,7 @@ import decoart from "../../assets/LandingPage/top-left.png"
 
 function HeroPage() {
     return (
-        <main
-            className="bg-white min-h-screen flex flex-col justify-center w-full"
-            style={{
-                background: "linear-gradient(50deg, rgba(234,242,224,1) 0%, rgba(246,247,237,1) 50%, rgba(234,242,224,1) 100%)",
-            }}       
-        >
+        <section className="min-h-screen flex flex-col justify-center w-full">
             <div className="grid grid-cols-8 grid-rows-4 grid-flow-col-dense min-h-screen justify-center items-center pr-[0.5]">
                 <div className="col-span-3 row-span-2 self-start w-full h-full overflow-hidden">
                     <Image
@@ -45,7 +40,7 @@ function HeroPage() {
                     />
                 </div>
             </div>
-        </main>
+        </section>
     );
 }
 
