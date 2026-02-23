@@ -38,13 +38,13 @@ function ComingSoonPage() {
                 <div className="flex md:col-start-[-3] row-start-[-2] col-span-4 md:col-span-2 flex-row content-between whitespace-nowrap text-black font-semibold
                 md:row-end-[-1] lg:row-end-[-1] 
                 row-span-1 md:row-span-2
-                text-sm xl:text-2xl 2xl:text-5xl
+                text-sm xl:text-2xl
                 justify-center md:justify-start self-start md:self-center">
                     <div className="flex inline-grid gap-[1vw]">
                         <div className="flex inline-flex items-center gap-5">
                             <div className="relative 
-                            w-8 lg:w-16 2xl:w-32 
-                            h-8 lg:h-16 2xl:h-32 ">
+                            w-8 lg:w-16
+                            h-8 lg:h-16">
                                 <Image
                                     src={calendarIcon}
                                     alt="Calendar Icon"
@@ -55,8 +55,8 @@ function ComingSoonPage() {
                         </div>
                         <div className="flex inline-flex items-center gap-5"> 
                             <div className="relative 
-                            w-8 lg:w-16 2xl:w-32 
-                            h-8 lg:h-16 2xl:h-32 ">
+                            w-8 lg:w-16
+                            h-8 lg:h-16">
                                 <Image
                                     src={locationIcon}
                                     alt="Location Icon"
