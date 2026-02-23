@@ -1,46 +1,51 @@
 import Image from "next/image";
-import callToAction from "../../assets/LandingPage/benih-chat-bubble.png";
-import calendarIcon from "../../assets/LandingPage/calendar.png"
-import locationIcon from "../../assets/LandingPage/locpin.png"
+import waveBG from "../../assets/LandingPage/Wave.png";
 
 function InformationPage() {
-    return(
-        <section className="min-h-screen flex flex-col justify-center w-full">
-            <div className="grid grid-cols-4 grid-rows-3 grid-flow-row min-h-screen justify-center items-center p-[15vw] relative">
-                <div className="row-span-3 self-start w-full h-full overflow-visible place-items-stretch absolute">
-                        <Image
-                            className="grid-row-start 1 grid-row-end-4"
-                            src={callToAction}
-                            fill
-                            alt="See you at ICONISSA 2026"
-                            style={{
-                                width: '100%',
-                                objectFit: 'contain',
-                            }}
-                        />
-                </div>
-                <div className="col-start-[-3] row-start-[-2] col-span-2 flex-row items-center content-between whitespace-nowrap text-black text-[2em] font-semibold">
-                    <div className="flex inline-grid gap-[1vw]">
-                        <div className="flex inline-flex items-center gap-5">
-                            <div className="relative w-16 h-16">
-                                <Image
-                                    src={calendarIcon}
-                                    alt="Calendar Icon"
-                                    
-                                />
-                            </div>
-                            <p>Technische Universität München <br /> Munich, Jerman</p>
-                        </div>
-                        <div className="flex inline-flex items-center gap-5"> 
-                            <div className="relative w-16 h-16">
-                                <Image
-                                    src={locationIcon}
-                                    alt="Location Icon"
-                                    fill
-                                />
-                            </div>
-                            <p>27-29 Agustus 2026</p>
-                        </div>   
+    return (
+        <section className="flex flex-col relative justify-center items-center bg-[#00804c]">
+            <div className="hidden lg:grid">
+                <Image
+                    fill
+                    src={waveBG}
+                    alt="wave-art"
+                />
+            </div>
+            <div className="flex flex-col items-center text-center space-y-[7vw] mb-[5vw] py-[7vw]">
+                <h2 className="text-2xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold tracking-tight">
+                    COMING VERY SOON
+                </h2>
+                <div className="flex flex-col md:flex-row grow gap-[5vw] md:gap-[2vw] 
+                items-stretch content-around text-black text-3xl 2xl:text-5xl px-[3vw]">
+                    <div className="flex flex-1 flex-col bg-[#f6f7ed] rounded-xl font-semibold px-[2vw] py-[1.5vw] text-left">
+                        <h1 className="flex items-center md:min-h-3/5 xl:min-h-[7.5rem]">
+                            International Conference of Integrated Intellectual Community (ICONIC) 2026
+                        </h1>
+                        <hr className="my-[2vw] h-1 bg-black border-0" />
+                        <p className="flex items-center justify-center self-stretch md:min-h-[3rem] xl:min-h-[5rem] font-medium text-center 
+                        text-xl 2xl:text-4xl">
+                            Innovation for a Green Economy and Society: Reimagining Indonesia’s Digital and Sustainable Transition
+                        </p>
+                    </div>
+                    <div className="flex flex-1 flex-col bg-[#f6f7ed] rounded-xl font-semibold px-[2vw] py-[1.5vw] text-left">
+                        <h1 className="flex items-center md:min-h-3/5 xl:min-h-[7.5rem]">
+                            Sea Student Summit 2026
+                        </h1>
+                        <hr className="my-[2vw] h-1 bg-black border-0" />
+                        <p className="flex items-center justify-center md:min-h-[1rem] xl:min-h-[5rem] font-medium text-center text-xl my-auto 
+                        text-xl 2xl:text-4xl">
+                            Collaboration within Southeast Asian Countries toward Sustainable Transition
+                        </p>
+                    </div>
+                    <div className="flex flex-1 flex-col bg-[#f6f7ed] rounded-xl font-semibold px-[2vw] py-[1.5vw] text-left">
+                        <h1 className="flex items-center md:min-h-3/5 xl:min-h-[7.5rem]">
+                            PPI Jerman 70th Anniversary
+                        </h1>
+                        <hr className="my-[2vw] h-1 bg-black border-0" />
+                        <p className="flex items-center justify-center md:min-h-[1rem] xl:min-h-[5rem] font-medium text-center text-xl my-auto 
+                        text-xl 2xl:text-4xl">
+                            70 Years of PPI Jerman: Honouring the Past, Empowering the Future
+                        </p>
                     </div>
                 </div>
             </div>
