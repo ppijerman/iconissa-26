@@ -1,7 +1,7 @@
 import Image from "next/image";
 import HeroPage from "../components/HomePage/HeroPage";
-import ComingSoonPage from "../components/HomePage/ComingSoonPage";
 import InformationPage from "../components/HomePage/InformationPage";
+import ComingSoonPage from "../components/HomePage/ComingSoonPage";
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
             }} 
     >
       <HeroPage />
-      <ComingSoonPage />
       <InformationPage />
+      <ComingSoonPage />
     </main>
   );
 }
