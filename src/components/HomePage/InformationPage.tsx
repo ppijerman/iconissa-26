@@ -11,7 +11,7 @@ function InformationPage() {
                     alt="wave-art"
                 />
             </div>
-            <div className="flex flex-col items-center text-center space-y-[7vw] mb-[5vw] py-[7vw]">
+            <div className="flex flex-col items-center text-center space-y-[7vw] mb-[5vw] py-[7vw] z-10">
                 <h2 className="text-2xl md:text-5xl lg:text-7xl font-bold tracking-tight">
                     COMING VERY SOON
                 </h2>
