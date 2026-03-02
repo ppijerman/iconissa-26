@@ -1,19 +1,22 @@
+import {iconissaLogo, ppij70thLogo, sssLogo} from "@/src/assets";
+import Image from "next/image";
+
 export default function InformationPage() {
     const events = [
         {
-            number: "01",
+            logo: iconissaLogo,
             title: "International Conference of Integrated Intellectual Community (ICONIC) 2026",
             subtitle: "Innovation for a Green Economy and Society: Reimagining Indonesia's Digital and Sustainable Transition",
             color: "from-emerald-500 to-teal-600",
         },
         {
-            number: "02",
+            logo: sssLogo,
             title: "SEA Student Summit 2026",
             subtitle: "Collaboration within Southeast Asian Countries toward Sustainable Transition",
             color: "from-teal-500 to-cyan-600",
         },
         {
-            number: "03",
+            logo: ppij70thLogo,
             title: "PPI Jerman 70th Anniversary",
             subtitle: "70 Years of PPI Jerman: Honouring the Past, Empowering the Future",
             color: "from-cyan-500 to-blue-600",
@@ -58,9 +61,15 @@ export default function InformationPage() {
                             <div className="relative p-6 sm:p-8 bg-white rounded-3xl flex-1 flex flex-col">
                                 <div className="flex flex-col gap-4 items-start flex-1">
                                     {/* Event Number with icon */}
-                                    <div className="flex-shrink-0 flex gap-4 w-full justify-between flex-col items-center">
-                                        <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${event.color} flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}>
-                                            {event.number}
+                                    <div className="flex-shrink-0 flex gap-4 w-full justify-start lg:justify-center lg:flex-col items-start lg:items-center">
+                                        <div className={`w-14 h-14 sm:w-18 sm:h-18 rounded-2xl bg-white border-2 border-gray-100 shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}>
+                                            <div className="w-full h-full p-2 flex">
+                                                <Image 
+                                                src={event.logo} 
+                                                alt={event.title}
+                                                className="w-full h-full object-contain"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
 
