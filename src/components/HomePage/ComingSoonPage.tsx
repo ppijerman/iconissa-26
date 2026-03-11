@@ -1,4 +1,4 @@
-import {benihMascot, ppijLogo} from "@/src/assets";
+import {benihMascot, ppijLogo} from "../../assets";
 import Image from "next/image";
 
 function ComingSoonPage() {

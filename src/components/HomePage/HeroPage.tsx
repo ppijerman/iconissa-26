@@ -1,5 +1,5 @@
 'use client';
-import {iconissaLogo, ppijLogo, topLeft} from "@/src/assets";
+import {iconissaLogo, ppijLogo, topLeft} from "../../assets";
 import Image from "next/image";
 
 

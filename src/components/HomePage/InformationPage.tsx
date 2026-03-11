@@ -1,4 +1,4 @@
-import {iconissaLogo, ppij70thLogo, sssLogo} from "@/src/assets";
+import {iconissaLogo, ppij70thLogo, sssLogo} from "../../assets";
 import Image from "next/image";
 
 export default function InformationPage() {
