@@ -8,18 +8,21 @@ export default function InformationPage() {
             title: "International Conference of Integrated Intellectual Community (ICONIC) 2026",
             subtitle: "Innovation for a Green Economy and Society: Reimagining Indonesia's Digital and Sustainable Transition",
             color: "from-emerald-500 to-teal-600",
+            hasSubmission: true
         },
         {
             logo: sssLogo,
             title: "SEA Student Summit 2026",
             subtitle: "Collaboration within Southeast Asian Countries toward Sustainable Transition",
             color: "from-teal-500 to-cyan-600",
+            hasSubmission: false
         },
         {
             logo: ppij70thLogo,
             title: "PPI Jerman 70th Anniversary",
             subtitle: "70 Years of PPI Jerman: Honouring the Past, Empowering the Future",
             color: "from-cyan-500 to-blue-600",
+            hasSubmission: false
         }
     ];
 
@@ -41,7 +44,7 @@ export default function InformationPage() {
                         Our Events
                     </h2>
                     <p className="text-base md:text-lg text-white-600 max-w-2xl mx-auto">
-                        Join us for three extraordinary events shaping Indonesia's sustainable future
+                        Join us for three extraordinary events shaping Indonesia&aposs sustainable future
                     </p>
                 </div>
 
@@ -82,6 +85,20 @@ export default function InformationPage() {
                                             {event.subtitle}
                                         </p>
 
+                                        {/* Submission Button */}
+                                        {event.hasSubmission && (
+                                        <div className="pt-3">
+                                            <button 
+                                            disabled
+                                            className="w-full sm:w-auto px-6 py-3 bg-gray-300 text-gray-500 font-semibold rounded-xl cursor-not-allowed flex items-center justify-center gap-2 transition-all"
+                                            >
+                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                            </svg>
+                                            <span>Submission Coming Soon</span>
+                                            </button>
+                                        </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
