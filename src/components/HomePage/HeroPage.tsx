@@ -1,4 +1,3 @@
-'use client';
 import {iconissaLogo, ppijLogo, topLeft} from "@/src/assets";
 import Image from "next/image";
 
@@ -18,6 +17,7 @@ function HeroPage() {
             <Image
                 src={topLeft}
                 alt=""
+                aria-hidden="true"
                 className="absolute top-[-5] left-0 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 object-contain z-10"
             />
 
@@ -26,6 +26,7 @@ function HeroPage() {
                 <Image
                     src={ppijLogo}
                     alt="PPI Jerman"
+                    sizes="(min-width: 1024px) 160px, (min-width: 768px) 96px, 80px"
                     className="h-8 sm:h-10 md:h-12 lg:h-16 object-contain w-auto"
                 />
             </div>
@@ -38,6 +39,8 @@ function HeroPage() {
                         <Image
                             src={iconissaLogo}
                             alt="ICONISSA Logo"
+                            priority
+                            sizes="(min-width: 1024px) 256px, (min-width: 768px) 192px, 160px"
                             className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-contain relative z-10"
                         />
                     </div>
@@ -66,13 +69,11 @@ function HeroPage() {
                 </div>
 
                 {/* Scroll Indicator */}
-                <button
-                    className="mt-12 md:mt-16 animate-bounce cursor-pointer"
-                    onClick={() => {
-                        document.getElementById('information-page')?.scrollIntoView({behavior: 'smooth'});
-                    }}
-                    aria-label="Scroll down"
-                    >
+                <a
+                    className="mt-12 md:mt-16 animate-bounce cursor-pointer inline-block"
+                    href="#information-page"
+                    aria-label="Scroll to event information"
+                >
                         <svg
                             className="w-6 h-6 md:w-8 md:h-8 mx-auto text-emerald-600"
                             fill="none"
@@ -86,7 +87,7 @@ function HeroPage() {
                                 d="M19 14l-7 7m0 0l-7-7m7 7V3"
                             />
                         </svg>
-                </button>
+                </a>
             </div>
         </section>
     );

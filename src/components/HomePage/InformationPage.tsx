@@ -43,15 +43,15 @@ export default function InformationPage() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 md:mb-4">
                         Our Events
                     </h2>
-                    <p className="text-base md:text-lg text-white-600 max-w-2xl mx-auto">
-                        Join us for three extraordinary events shaping Indonesia&aposs sustainable future
+                    <p className="max-w-2xl mx-auto text-base md:text-lg text-white/80">
+                        Join us for three extraordinary events shaping Indonesia&apos;s sustainable future
                     </p>
                 </div>
 
                 {/* Events Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
                     {events.map((event, index) => (
-                        <div
+                        <article
                             key={index}
                             className="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col"
                         >
@@ -106,7 +106,7 @@ export default function InformationPage() {
                             {/* Decorative Corner with pattern */}
                             <div className={`absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br ${event.color} opacity-5 rounded-bl-full`} />
                             <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-gray-100 rounded-bl-2xl" />
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>
