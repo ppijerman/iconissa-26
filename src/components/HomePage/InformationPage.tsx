@@ -1,14 +1,26 @@
-import {iconissaLogo, ppij70thLogo, sssLogo} from "@/src/assets";
-import Image from "next/image";
+import {iconissaLogo, ppij70thLogo, sssLogo, websiteIcon} from "@/src/assets";
+import Image, {type StaticImageData} from "next/image";
+
+type EventCard = {
+    logo: StaticImageData;
+    title: string;
+    subtitle: string;
+    color: string;
+    hasSubmission: boolean;
+    submissionUrl?: string;
+    submissionLabel?: string;
+};
 
 export default function InformationPage() {
-    const events = [
+    const events: EventCard[] = [
         {
             logo: iconissaLogo,
             title: "International Conference of Integrated Intellectual Community (ICONIC) 2026",
             subtitle: "Innovation for a Green Economy and Society: Reimagining Indonesia's Digital and Sustainable Transition",
             color: "from-emerald-500 to-teal-600",
-            hasSubmission: true
+            hasSubmission: true,
+            submissionUrl: "https://submission-iconissa.ppijerman.org/",
+            submissionLabel: "Abstract Submission & Reviewer Sign-Up"
         },
         {
             logo: sssLogo,
@@ -86,20 +98,24 @@ export default function InformationPage() {
                                         </p>
 
                                         {/* Submission Button */}
-                                        {event.hasSubmission && (
-                                        <div className="pt-3">
-                                            <button
-                                            type="button"
-                                            disabled
-                                            aria-label="ICONIC 2026 submission is coming soon"
-                                            className="mx-auto flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-xl bg-gray-300 px-6 py-3 text-center font-semibold text-gray-500 transition-all sm:w-auto sm:min-w-72"
-                                            >
-                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                                            </svg>
-                                            <span>Submission Coming Soon</span>
-                                            </button>
-                                        </div>
+                                        {event.hasSubmission && event.submissionUrl && event.submissionLabel && (
+                                            <div className="pt-3">
+                                                <a
+                                                    href={event.submissionUrl}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    aria-label={`${event.title} ${event.submissionLabel}`}
+                                                    className="mx-auto flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-center font-semibold text-white transition-all hover:bg-emerald-700 sm:w-auto sm:min-w-72"
+                                                >
+                                                    <Image
+                                                        src={websiteIcon}
+                                                        alt=""
+                                                        aria-hidden="true"
+                                                        className="h-5 w-5 object-contain brightness-0 invert"
+                                                    />
+                                                    <span>{event.submissionLabel}</span>
+                                                </a>
+                                            </div>
                                         )}
                                     </div>
                                 </div>
