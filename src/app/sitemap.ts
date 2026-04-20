@@ -11,9 +11,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: siteUrl.toString(),
-      lastModified: new Date(),
+      lastModified: "2026-04-20T00:00:00.000Z",
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: new URL("/iconic-2026", siteUrl).toString(),
+      lastModified: "2026-04-20T00:00:00.000Z",
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
   ];
 }

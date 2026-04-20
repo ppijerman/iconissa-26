@@ -12,6 +12,21 @@ const siteKeywords = [
   "Munich conference 2026",
   "PPI Jerman",
 ];
+const iconic2026Title = "ICONIC 2026 | International Conference of Integrated Intellectual Community";
+const iconic2026Description =
+  "ICONIC 2026 is the international conference within ICONISSA 2026 in Munich, focused on green economy, digital innovation, and sustainable transition in Indonesia.";
+const iconic2026Keywords = [
+  "ICONIC 2026",
+  "International Conference of Integrated Intellectual Community",
+  "ICONISSA conference",
+  "Indonesia sustainable transition",
+  "green economy conference",
+  "digital innovation conference",
+  "AI for sustainable development",
+  "circular economy Indonesia",
+  "green finance conference",
+  "Munich academic conference",
+];
 
 const organizationName = "PPI Jerman";
 const eventVenueName = "Technical University of Munich";
@@ -37,6 +52,9 @@ export {
   eventStartDate,
   eventVenueName,
   getSiteUrl,
+  iconic2026Description,
+  iconic2026Keywords,
+  iconic2026Title,
   organizationName,
   siteDescription,
   siteKeywords,
