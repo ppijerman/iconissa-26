@@ -193,6 +193,35 @@ function Iconic2026Content() {
           </div>
         </section>
 
+        {/* Submission Guidelines Download */}
+          <div className="bg-emerald-50/50 rounded-2xl border border-emerald-200 p-6 md:p-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+              {/* Icon */}
+              <div className="flex-shrink-0 w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center">
+                <svg className="w-7 h-7 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+
+              {/* Text Content */}
+              <div className="flex-1">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-1">Submission Guidelines</h3>
+                <p className="text-sm md:text-base text-gray-600">
+                  Download the complete guidelines for abstract formatting, requirements, and review process
+                </p>
+              </div>
+
+              {/* Download Button */}
+              <a
+                href="/Guideline-For-Submission.pdf"
+                download
+                className="flex-shrink-0 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg inline-flex items-center gap-2 transition-colors"
+              >
+                Download
+              </a>
+            </div>
+          </div>
+
         <section className="rounded-3xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-100 to-gray-50 p-8 text-center md:p-12">
           <div className="mx-auto max-w-2xl">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-300">
