@@ -14,13 +14,13 @@ const teamMembers: TeamMember[] = [
       "Led project development, coordinated the team, and oversaw system architecture and integration across frontend and backend.",
   },
   {
-    name: "RBillyJ",
+    name: "Rafael Billy Jayadi",
     role: "Frontend Developer",
     contribution:
       "Developed core researcher-facing features including onboarding, dashboard, submission flow, and rebuttal interface.",
   },
   {
-    name: "Leon Alexius",
+    name: "Lie Leon Alexius",
     role: "Frontend Developer",
     contribution:
       "Built main application layout, navigation, and dashboards for reviewer and editor workflows.",
@@ -32,13 +32,13 @@ const teamMembers: TeamMember[] = [
       "Implemented reviewer assignment, review APIs, admin management, and integrated notifications across review workflows.",
   },
   {
-    name: "Mulya Salam",
+    name: "Muhammad Mulya Salam",
     role: "Backend Developer",
     contribution:
       "Developed rebuttal, editorial decision, and notification systems, including admin management interface.",
   },
   {
-    name: "Michael (mxespl)",
+    name: "Michael Xhristiano Espranata",
     role: "Backend Developer",
     contribution:
       "Built submission APIs, status tracking, and integrated notifications across submission and onboarding processes.",
