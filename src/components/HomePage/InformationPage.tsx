@@ -30,14 +30,16 @@ export default function InformationPage() {
             title: "SEA Student Summit 2026",
             subtitle: "Collaboration within Southeast Asian Countries toward Sustainable Transition",
             color: "from-teal-500 to-cyan-600",
-            hasSubmission: false
+            hasSubmission: false,
+            detailsUrl: "/sea-student-summit-2026"
         },
         {
             logo: ppij70thLogo,
             title: "PPI Jerman 70th Anniversary",
             subtitle: "70 Years of PPI Jerman: Honouring the Past, Empowering the Future",
             color: "from-cyan-500 to-blue-600",
-            hasSubmission: false
+            hasSubmission: false,
+            detailsUrl: "/ppij-70th-anniversary"
         }
     ];
 
@@ -107,12 +109,6 @@ export default function InformationPage() {
                                         <p className="text-sm leading-relaxed text-gray-600 lg:text-[0.95rem] xl:text-base">
                                             {event.subtitle}
                                         </p>
-
-                                        {event.detailsUrl && (
-                                            <p className="pt-2 text-sm font-semibold text-emerald-700">
-                                                Open event page
-                                            </p>
-                                        )}
 
                                         {/* Submission Button */}
                                         {event.hasSubmission && event.submissionUrl && event.submissionLabel && (
