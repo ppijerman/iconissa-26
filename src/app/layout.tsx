@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import Footer from "@/src/components/footer";
 import {
   getSiteUrl,
   organizationName,
@@ -71,9 +72,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakartaSans.variable} ${ibmPlexMono.variable} antialiased`}
+        className={`${plusJakartaSans.variable} ${ibmPlexMono.variable} min-h-screen antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

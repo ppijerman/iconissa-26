@@ -9,6 +9,7 @@ import {
   siteDescription,
   siteName,
 } from "@/src/app/seo";
+import NavigationBar from "../components/navigation-bar";
 import HeroPage from "../components/HomePage/HeroPage";
 import InformationPage from "../components/HomePage/InformationPage";
 import ComingSoonPage from "../components/HomePage/ComingSoonPage";
@@ -68,6 +69,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <NavigationBar reserveSpace={false} showAfterHero={true} />
       <HeroPage />
       <InformationPage />
       <ComingSoonPage />
