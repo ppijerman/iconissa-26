@@ -3,7 +3,7 @@ import NavigationBar from "@/src/components/navigation-bar";
 type TeamMember = {
   contribution: string;
   name: string;
-  role: string;
+  role: string | null;
 };
 
 const teamMembers: TeamMember[] = [
@@ -11,35 +11,35 @@ const teamMembers: TeamMember[] = [
     name: "Vincentius Reynaldo",
     role: "Team Lead",
     contribution:
-      "Led project development, coordinated the team, and oversaw system architecture and integration across frontend and backend.",
+      "Led the project development, coordinated the team, oversaw system architecture and frontend-backend integration, and managed ongoing website maintenance.",
   },
   {
     name: "Rafael Billy Jayadi",
-    role: "Frontend Developer",
+    role: null,
     contribution:
       "Developed core researcher-facing features including onboarding, dashboard, submission flow, and rebuttal interface.",
   },
   {
     name: "Lie Leon Alexius",
-    role: "Frontend Developer",
+    role: null,
     contribution:
       "Built main application layout, navigation, and dashboards for reviewer and editor workflows.",
   },
   {
     name: "Timothy Setiawan",
-    role: "Backend Developer",
+    role: null,
     contribution:
       "Implemented reviewer assignment, review APIs, admin management, and integrated notifications across review workflows.",
   },
   {
     name: "Muhammad Mulya Salam",
-    role: "Backend Developer",
+    role: null,
     contribution:
       "Developed rebuttal, editorial decision, and notification systems, including admin management interface.",
   },
   {
     name: "Michael Xhristiano Espranata",
-    role: "Backend Developer",
+    role: null,
     contribution:
       "Built submission APIs, status tracking, and integrated notifications across submission and onboarding processes.",
   },
@@ -89,22 +89,32 @@ function CreditsPage() {
                 key={member.name}
                 className="group rounded-2xl border border-emerald-100 bg-white p-8 shadow-lg transition-all duration-300 hover:border-emerald-300 hover:shadow-xl"
               >
-                <div className="mb-4 flex items-start gap-4">
+                <div
+                  className={`mb-4 flex gap-4 ${member.role ? "items-start" : "items-center"}`}
+                >
                   <div className="flex-shrink-0">
                     <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-xl font-bold text-white shadow-md transition-transform group-hover:scale-110">
                       {member.name.charAt(0)}
                     </div>
                   </div>
                   <div className="min-w-0 flex-1">
-                    <h2 className="mb-1 truncate text-xl font-bold text-gray-800">
-                      {member.name}
-                    </h2>
-                    <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 px-3 py-1">
-                      <div className="h-2 w-2 rounded-full bg-emerald-600" />
-                      <span className="text-sm font-semibold text-emerald-700">
-                        {member.role}
-                      </span>
-                    </div>
+                    {member.role ? (
+                      <h2 className="mb-1 truncate text-xl font-bold text-gray-800">
+                        {member.name}
+                      </h2>
+                    ) : (
+                      <h2 className="truncate text-xl font-bold text-gray-800">
+                        {member.name}
+                      </h2>
+                    )}
+                    {member.role ? (
+                      <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 px-3 py-1">
+                        <div className="h-2 w-2 rounded-full bg-emerald-600" />
+                        <span className="text-sm font-semibold text-emerald-700">
+                          {member.role}
+                        </span>
+                      </div>
+                    ) : null}
                   </div>
                 </div>
 
