@@ -6,3 +6,4 @@ export {default as iconissaLogo} from "./LandingPage/iconissa.png";
 export {default as ppij70thLogo} from "./LandingPage/ppij70th.png";
 export {default as sssLogo} from "./LandingPage/LogoSSS.png";
 export {default as websiteIcon} from "./icons/website.png";
+export {default as ppiTurki} from "./LandingPage/ppiturki.png";

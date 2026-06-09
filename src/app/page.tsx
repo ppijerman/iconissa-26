@@ -13,6 +13,7 @@ import NavigationBar from "../components/navigation-bar";
 import HeroPage from "../components/HomePage/HeroPage";
 import InformationPage from "../components/HomePage/InformationPage";
 import ComingSoonPage from "../components/HomePage/ComingSoonPage";
+import Partners from "../components/HomePage/Partners";
 
 export default function Home() {
   const siteUrl = getSiteUrl();
@@ -72,6 +73,7 @@ export default function Home() {
       <NavigationBar reserveSpace={false} showAfterHero={true} />
       <HeroPage />
       <InformationPage />
+      <Partners />
       <ComingSoonPage />
     </main>
   );
