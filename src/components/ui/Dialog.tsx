@@ -26,10 +26,10 @@ export default function Dialog({ open, onClose, children }: DialogProps) {
 			{/* Dialog content */}
 			<div className="relative z-10 m-auto h-fit rounded-xl w-fit bg-white">
 				<div className="flex flex-row justify-between mb-4 pt-2 px-5">
-					<span className="flex-9" />
+					<span className="" />
 					<button
 						onClick={onClose}
-						className="mb-2 py-1 px-2 cursor-pointer rounded border-none w-8 h-8 font-bold bg-red-600 text-white"
+						className=" inline-flex items-center mb-2 py-1 px-2 cursor-pointer rounded border-none w-8 h-8 font-bold bg-red-600 text-white"
 					>
 						<CircleX />
 					</button>
