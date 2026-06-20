@@ -24,7 +24,7 @@ export default function Dialog({ open, onClose, children }: DialogProps) {
 			{/* Backdrop — blocks all interaction with the page behind */}
 			<div className="fixed inset-0 bg-gray-800/50" onClick={onClose} />
 			{/* Dialog content */}
-			<div className="relative z-10 m-auto h-fit rounded-xl w-fit bg-white">
+			<div className="relative z-10 m-auto h-fit rounded-xl w-[min(500px,100vw-2rem)] bg-white">
 				<div className="flex flex-row justify-between mb-4 pt-2 px-5">
 					<span className="" />
 					<button
@@ -34,7 +34,7 @@ export default function Dialog({ open, onClose, children }: DialogProps) {
 						<CircleX />
 					</button>
 				</div>
-				<div className="w-125 max-w-full border-0 flex flex-col">
+				<div className="w-full border-0 flex flex-col">
 					{children}
 				</div>
 			</div>
