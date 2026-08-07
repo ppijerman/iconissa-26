@@ -7,3 +7,6 @@ export {default as ppij70thLogo} from "./LandingPage/ppij70th.png";
 export {default as sssLogo} from "./LandingPage/LogoSSS.png";
 export {default as websiteIcon} from "./icons/website.png";
 export {default as ppiTurki} from "./LandingPage/ppiturki.png";
+export {default as indomie} from "./LandingPage/indomie.png";
+export {default as TK} from "./LandingPage/logo-TK.png";
+export {default as omio} from "./LandingPage/omio.png";
