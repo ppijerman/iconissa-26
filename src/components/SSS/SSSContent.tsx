@@ -14,7 +14,7 @@ const summitDetails: SummitDetail[] = [
     icon: <CalendarDays className="h-5 w-5 text-white" />,
   },
   {
-    description: "TU Munchen, Munich, Germany",
+    description: "TU München, Munich, Germany",
     icon: <MapPin className="h-5 w-5 text-white" />,
   },
   {
@@ -66,11 +66,10 @@ function SSSContent() {
 
           <div className="mb-12 space-y-4 text-center">
             <h1 className="bg-gradient-to-r from-teal-700 via-cyan-600 to-teal-800 bg-clip-text text-4xl font-bold leading-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-              SEA Student Summit 2026
+              SEA Students&apos; Summit 2026
             </h1>
             <h2 className="mx-auto max-w-4xl text-xl font-semibold leading-tight text-gray-700 sm:text-2xl md:text-3xl">
-              Collaboration within Southeast Asian Countries toward Sustainable
-              Transition
+              Collaboration within Southeast-Asian Countries toward a Sustainable Transition
             </h2>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-700 md:text-xl">
               A student platform for regional dialogue, collaboration, and

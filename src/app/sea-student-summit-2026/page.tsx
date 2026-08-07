@@ -3,9 +3,9 @@ import SSSContent from "@/src/components/SSS/SSSContent";
 import NavigationBar from "@/src/components/navigation-bar";
 import { getSiteUrl, organizationName, siteName } from "@/src/app/seo";
 
-const seaStudentSummitTitle = "SEA Student Summit 2026";
+const seaStudentSummitTitle = "SEA Students' Summit 2026";
 const seaStudentSummitDescription =
-  "SEA Student Summit 2026 is a student platform in Munich focused on regional collaboration and sustainable transition across Southeast Asia.";
+  "SEA Students' Summit 2026 is a student platform in Munich focused on regional collaboration and sustainable transition across Southeast Asia.";
 
 const siteUrl = getSiteUrl();
 const pageUrl = siteUrl
