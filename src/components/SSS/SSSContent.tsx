@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CalendarDays, MapPin, Users, FileUser, Utensils } from "lucide-react";
+import CulturalDishesMenu from "@/src/components/SSS/CulturalDishesMenu";
+import Speakers from "@/src/components/SSS/Speakers";
 
 type SummitDetail = {
 	description: string;
@@ -84,6 +86,49 @@ function SSSContent() {
 						{summitDetails.map(renderSummitDetailCard)}
 					</div>
 				</section>
+
+				<section className="rounded-3xl bg-white p-8 shadow-xl md:p-12">
+					<h2 className="mb-6 text-2xl font-bold text-gray-800 md:text-3xl">
+						About SEA Student Summit 2026
+					</h2>
+					<div className="space-y-4 text-lg leading-relaxed text-gray-600">
+						<p>
+							The Southeast-Asian Students&apos; Summit (SSS)
+							2026 is an annual program organized by The
+							Indonesian Students Association e.V. and
+							supported by student associations and
+							communities of Southeast-Asian students and
+							diaspora in Germany, as well as the Indonesian
+							Embassy. The summit aims to gather students in
+							Germany, academics, policymakers, and
+							professionals together to exchange perspectives
+							about the growth of Southeast Asia.
+						</p>
+						<p>
+							With this year&apos;s theme{" "}
+							<strong>
+								&quot;Collaboration within Southeast-Asian
+								Countries Toward a Sustainable
+								Transition&quot;
+							</strong>
+							, the SSS 2026 invites three speakers, each from
+							a technical, social, and political background,
+							to discuss the challenges and opportunities to
+							bring Southeast Asia to transition towards
+							renewable energy. The SSS 2026 also hosts
+							cultural booths that present Southeast-Asian
+							cultures. Brought by student associations and
+							youth communities, SSS participants can
+							experience Southeast Asia firsthand and
+							understand their culture and perspectives
+							better.
+						</p>
+					</div>
+				</section>
+
+				<Speakers />
+
+				<CulturalDishesMenu />
 
 				<section className="rounded-3xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-100 to-gray-50 p-8 text-center md:p-12">
 					<div className="mx-auto max-w-2xl">
