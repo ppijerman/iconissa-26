@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CalendarDays, MapPin, Users, FileUser, Utensils } from "lucide-react";
+import CulturalDishesMenu from "@/src/components/SSS/CulturalDishesMenu";
+import Speakers from "@/src/components/SSS/Speakers";
 
 type SummitDetail = {
 	description: string;
@@ -84,6 +86,10 @@ function SSSContent() {
 						{summitDetails.map(renderSummitDetailCard)}
 					</div>
 				</section>
+
+				<Speakers />
+
+				<CulturalDishesMenu />
 
 				<section className="rounded-3xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-100 to-gray-50 p-8 text-center md:p-12">
 					<div className="mx-auto max-w-2xl">

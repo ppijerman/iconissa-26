@@ -10,3 +10,10 @@ export {default as ppiTurki} from "./LandingPage/ppiturki.png";
 export {default as indomie} from "./LandingPage/indomie.png";
 export {default as TK} from "./LandingPage/logo-TK.png";
 export {default as omio} from "./LandingPage/omio.png";
+
+export {default as indonesianMenu} from "./SSS/Menu/Indonesian.jpeg";
+export {default as malaysianMenu} from "./SSS/Menu/Malaysian.jpeg";
+export {default as pinoyMenu} from "./SSS/Menu/Pinoy.jpeg";
+export {default as speakerYasmin} from "./SSS/Speakers/AmiraYasmin.jpeg";
+export {default as speakerLazuardy} from "./SSS/Speakers/NLazuardy.jpeg";
+export {default as speakerStodulka} from "./SSS/Speakers/Stodulka.jpeg";
