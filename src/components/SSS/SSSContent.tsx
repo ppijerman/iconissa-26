@@ -15,7 +15,7 @@ const summitDetails: SummitDetail[] = [
 		icon: <CalendarDays className="h-5 w-5 text-white" />,
 	},
 	{
-		description: "TU Munchen, Munich, Germany",
+		description: "TU München, Munich, Germany",
 		icon: <MapPin className="h-5 w-5 text-white" />,
 	},
 	{
