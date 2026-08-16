@@ -75,7 +75,7 @@ const rundownDays: RundownDay[] = [
         end: "12:35",
         activity:
           "Data-Driven Systems for Sustainable Development: AI, Energy Transition, and Innovation Ecosystems in Indonesia's Digital Future",
-        note: "By Prof. Dr.-Ing. Hendro Wicaksono (Constructor University, Bremen), Prof. Dr.-Ing. Aaron Praktiknjo (Universitätsprofessor RWTH Aachen), and Dr. Noor Titan Hartono. Includes Q&A session.",
+        note: "By Prof. Dr.-Ing. Hendro Wicaksono (Constructor University, Bremen), Prof. Dr.-Ing. Aaron Praktiknjo (Universitätsprofessor RWTH Aachen), and Dr. Noor Titan Hartono (Team Lead at Forschungszentrum Jülich, MIT PhD). Includes Q&A session.",
         highlighted: true,
         badge: "Panel Discussion",
         speakers: [
@@ -95,12 +95,12 @@ const rundownDays: RundownDay[] = [
       { start: "16:05", end: "16:25", activity: "Coffee Break" },
       {
         start: "16:25",
-        end: "17:40",
+        end: "17:35",
         activity: "Community-Led Pathways towards the Sustainable Transition",
         note: "3 Speakers Presentations + Q&A",
         badge: "Research Panel 2",
       },
-      { start: "17:40", end: "17:45", activity: "Closing" },
+      { start: "17:35", end: "17:45", activity: "Closing" },
     ],
   },
   {
@@ -127,7 +127,7 @@ const rundownDays: RundownDay[] = [
         start: "10:50",
         end: "12:00",
         activity: "Navigating Career in Green & Sustainable Transition in Germany",
-        note: "By Yoshan Fazri, Head of Sustainable Finance, AGCO, Berlin. Includes Q&A session.",
+        note: "By Yoshan Fazri, Global Director of Commercial Sustainability & Circularity at Rabobank Group. Includes Q&A session.",
         highlighted: true,
         badge: "Career Talk",
         speakers: [{ name: "Yoshan Fazri", photo: yoshanFazriPhoto }],
@@ -187,7 +187,7 @@ function renderRundownItem(item: RundownItem, index: number) {
             ) : null}
           </div>
           {item.speakers && item.speakers.length > 0 ? (
-            <div className="flex flex-shrink-0 flex-row flex-wrap gap-2">
+            <div className="grid flex-shrink-0 grid-cols-2 gap-2" dir="rtl">
               {item.speakers.map((speaker) => (
                 <Image
                   key={speaker.name}

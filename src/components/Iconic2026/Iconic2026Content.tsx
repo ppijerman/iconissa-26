@@ -30,7 +30,7 @@ const eventDetails: EventDetail[] = [
     icon: <CalendarDays className="h-5 w-5 text-white" />,
   },
   {
-    description: "TU München, Munich, Germany",
+    description: "EineWeltHaus (Raum 109) Schwanthalerstraße 80, 80336 München-Ludwigsvorstadt-Isarvorstadt",
     icon: <MapPin className="h-5 w-5 text-white" />,
   },
   {
