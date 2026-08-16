@@ -10,6 +10,7 @@ import {
   MapPin,
   Users,
 } from "lucide-react";
+import RundownSection from "@/src/components/Iconic2026/RundownSection";
 
 type EventDetail = {
   description: string;
@@ -173,6 +174,8 @@ function Iconic2026Content() {
           </div>
         </section>
 
+        <RundownSection />
+
         <section className="rounded-3xl bg-gradient-to-br from-emerald-50 to-teal-50 p-8 md:p-12">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-2xl font-bold text-gray-800 md:text-3xl">
@@ -246,7 +249,7 @@ function Iconic2026Content() {
                 aria-hidden="true"
                 className="h-5 w-5 object-contain brightness-0 invert"
               />
-              <span>Abstract Submission &amp; Reviewer Sign-Up</span>
+              <span>Abstract Submission &amp; Reviewer Portal</span>
             </Link>
           </div>
         </section>

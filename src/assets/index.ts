@@ -11,6 +11,13 @@ export {default as indomie} from "./LandingPage/indomie.png";
 export {default as TK} from "./LandingPage/logo-TK.png";
 export {default as omio} from "./LandingPage/omio.png";
 
+export {default as marziaTraversoPhoto} from "./ICONIC/Speakers/marziatraverso.jpg";
+export {default as arifHavasPhoto} from "./ICONIC/Speakers/arifhavas.jpg";
+export {default as hendroWicaksonoPhoto} from "./ICONIC/Speakers/Hendro.webp";
+export {default as aaronPraktiknjoPhoto} from "./ICONIC/Speakers/aaronpraktiknjo.jpg";
+export {default as noorTitanPhoto} from "./ICONIC/Speakers/noortitan.jpg";
+export {default as yoshanFazriPhoto} from "./ICONIC/Speakers/yoshanfazri.jpg";
+
 export {default as indonesianMenu} from "./SSS/Menu/Indonesian.jpeg";
 export {default as malaysianMenu} from "./SSS/Menu/Malaysian.jpeg";
 export {default as pinoyMenu} from "./SSS/Menu/Pinoy.jpeg";
