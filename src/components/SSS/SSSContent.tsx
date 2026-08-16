@@ -2,7 +2,7 @@ import { sssLogo, websiteIcon } from "@/src/assets";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { CalendarDays, MapPin, Users, FileUser, Utensils } from "lucide-react";
+import { CalendarDays, MapPin, Store, FileUser, Utensils } from "lucide-react";
 import CulturalDishesMenu from "@/src/components/SSS/CulturalDishesMenu";
 import Speakers from "@/src/components/SSS/Speakers";
 
@@ -13,16 +13,16 @@ type SummitDetail = {
 
 const summitDetails: SummitDetail[] = [
 	{
-		description: "29 August 2026",
+		description: "29 August 2026, 09:00-16:00 CEST",
 		icon: <CalendarDays className="h-5 w-5 text-white" />,
 	},
 	{
-		description: "TU München, Munich, Germany",
+		description: "TU Munich Main Campus, Arcisstraße 21, 80333 Munich",
 		icon: <MapPin className="h-5 w-5 text-white" />,
 	},
 	{
-		description: "Students from Southeast Asia",
-		icon: <Users className="h-5 w-5 text-white" />,
+		description: "Cultural Booth, Talkshow, and Discussion Sessions",
+		icon: <Store className="h-5 w-5 text-white" />,
 	},
 ];
 
@@ -60,7 +60,7 @@ function SSSContent() {
 							<div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-400 to-cyan-400 opacity-20 blur-2xl" />
 							<Image
 								src={sssLogo}
-								alt="SEA Student Summit 2026"
+								alt="Southeast-Asian Students' Summit 2026"
 								className="relative z-10 h-32 w-32 object-contain sm:h-40 sm:w-40 md:h-48 md:w-48"
 								priority
 							/>
@@ -69,11 +69,11 @@ function SSSContent() {
 
 					<div className="mb-12 space-y-4 text-center">
 						<h1 className="bg-gradient-to-r from-teal-700 via-cyan-600 to-teal-800 bg-clip-text text-4xl font-bold leading-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-							SEA Student Summit 2026
+							Southeast-Asian Students&apos; Summit 2026
 						</h1>
 						<h2 className="mx-auto max-w-4xl text-xl font-semibold leading-tight text-gray-700 sm:text-2xl md:text-3xl">
 							Collaboration within Southeast Asian Countries
-							toward Sustainable Transition
+							toward a Sustainable Transition
 						</h2>
 						<p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-700 md:text-xl">
 							A student platform for regional dialogue,
@@ -89,7 +89,7 @@ function SSSContent() {
 
 				<section className="rounded-3xl bg-white p-8 shadow-xl md:p-12">
 					<h2 className="mb-6 text-2xl font-bold text-gray-800 md:text-3xl">
-						About SEA Student Summit 2026
+						About Southeast-Asian Students&apos; Summit 2026
 					</h2>
 					<div className="space-y-4 text-lg leading-relaxed text-gray-600">
 						<p>
@@ -99,10 +99,14 @@ function SSSContent() {
 							supported by student associations and
 							communities of Southeast-Asian students and
 							diaspora in Germany, as well as the Indonesian
-							Embassy. The summit aims to gather students in
-							Germany, academics, policymakers, and
-							professionals together to exchange perspectives
-							about the growth of Southeast Asia.
+							Embassy. The summit aims to gather{" "}
+							<strong> 
+								students in
+								Germany, academics, policymakers, and
+								professionals 
+							</strong>
+							{" "}together to exchange perspectives
+							about the growth of Southeast Asia.n
 						</p>
 						<p>
 							With this year&apos;s theme{" "}
