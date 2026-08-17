@@ -17,7 +17,7 @@ const summitDetails: SummitDetail[] = [
 		icon: <CalendarDays className="h-5 w-5 text-white" />,
 	},
 	{
-		description: "TU Munich Main Campus, Arcisstraße 21, 80333 Munich",
+		description: "TU Munich Main Campus, Arcisstraße 21, 80333 München",
 		icon: <MapPin className="h-5 w-5 text-white" />,
 	},
 	{
