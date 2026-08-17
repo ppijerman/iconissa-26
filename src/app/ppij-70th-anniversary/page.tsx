@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function PPIJJerman70thAnniversaryPage() {
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,_#ecfeff_0%,_#f5faff_48%,_#ffffff_100%)]">
+    <main className="min-h-screen bg-[linear-gradient(180deg,_#FFFBEB_0%,_#FEF5F3_48%,_#ffffff_100%)]">
       <NavigationBar />
       <PPIJAnnivContent />
     </main>

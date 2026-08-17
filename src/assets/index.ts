@@ -24,3 +24,9 @@ export {default as pinoyMenu} from "./SSS/Menu/Pinoy.jpeg";
 export {default as speakerYasmin} from "./SSS/Speakers/AmiraYasmin.jpeg";
 export {default as speakerLazuardy} from "./SSS/Speakers/NLazuardy.jpeg";
 export {default as speakerStodulka} from "./SSS/Speakers/Stodulka.jpeg";
+
+export {default as afoPhoto} from "./Anniv/Performers/AFO (Angklung Frankfurt Orchestra)/Photo 12.06.26, 21 31 15.jpg";
+export {default as iramandaPhoto} from "./Anniv/Performers/Grup Tari Iramanda/PHOTO-2026-05-10-17-18-58.jpg";
+export {default as deuphoriaPhoto} from "./Anniv/Performers/DEuphoria/21750fd1-23eb-4a83-b201-2a4e136d2c23.jpg";
+export {default as asepMSPhoto} from "./Anniv/Performers/AsepMS/0e7c34f1-b9af-4810-9183-9c222d116972.jpg";
+export {default as bujanganTangguhPhoto} from "./Anniv/Performers/Bujangan Tangguh x Kezia/WhatsApp Image 2026-07-11 at 15.43.21.jpeg";
