@@ -44,6 +44,92 @@ function renderSummitDetailCard(summitDetail: SummitDetail) {
 	);
 }
 
+type RundownItem = {
+	time: string;
+	activity: string;
+	note?: string;
+	highlighted?: boolean;
+};
+
+const rundownItems: RundownItem[] = [
+	{
+		time: "09:00 – 10:00",
+		activity: "Participant Re-registration",
+	},
+	{
+		time: "10:00 – 10:05",
+		activity: "Opening",
+	},
+	{
+		time: "10:05 – 10:35",
+		activity: "Welcoming Remarks",
+		note: "From ICONISSA Director, Student Association, and Ambassador of Indonesia to Germany",
+	},
+	{
+		time: "10:35 – 12:00",
+		activity: "Talkshow Session",
+		highlighted: true,
+	},
+	{
+		time: "12:00 – 13:10",
+		activity: "Group Discussion Session",
+	},
+	{
+		time: "13:10 – 13:45",
+		activity: "Networking Session and Cultural Booths",
+	},
+	{
+		time: "13:45 – 16:00",
+		activity: "Lucky Draw",
+	},
+	{
+		time: "16:00 – 16:05",
+		activity: "Closing",
+	},
+];
+
+function renderRundownItem(item: RundownItem, index: number) {
+	return (
+		<li
+			key={`${item.time}-${item.activity}-${index}`}
+			className="relative flex gap-4 pb-8 last:pb-0"
+		>
+			<div className="flex flex-shrink-0 flex-col items-center">
+				<span
+					className={`z-10 h-3 w-3 flex-shrink-0 rounded-full ${
+						item.highlighted
+							? "bg-teal-600 ring-4 ring-teal-200"
+							: "bg-teal-300"
+					}`}
+				/>
+				<span className="mt-1 w-px flex-1 bg-teal-200 last:hidden" />
+			</div>
+
+			<div
+				className={`flex-1 rounded-2xl border p-4 sm:p-5 ${
+					item.highlighted
+						? "border-teal-300 bg-teal-50 shadow-md"
+						: "border-gray-100 bg-white/60"
+				}`}
+			>
+				<div className="mb-1 flex flex-wrap items-center gap-2">
+					<span className="text-sm font-semibold text-teal-700">
+						{item.time}
+					</span>
+				</div>
+				<p className="font-semibold text-gray-800">
+					{item.activity}
+				</p>
+				{item.note ? (
+					<p className="mt-1 text-sm italic leading-relaxed text-gray-600">
+						{item.note}
+					</p>
+				) : null}
+			</div>
+		</li>
+	);
+}
+
 function SSSContent() {
 	return (
 		<section className="relative overflow-hidden px-4 py-12 md:px-6 md:py-20">
@@ -133,6 +219,22 @@ function SSSContent() {
 				<Speakers />
 
 				<CulturalDishesMenu />
+
+				<section className="rounded-3xl bg-white p-8 shadow-xl md:p-12">
+					<div className="mb-8 text-center">
+						<h2 className="mb-2 text-2xl font-bold text-gray-800 md:text-3xl">
+							Event Rundown
+						</h2>
+						<p className="text-lg leading-relaxed text-gray-600">
+							Saturday, 29 August 2026 · TU München,
+							Arcisstraße 21, 80333 München
+						</p>
+					</div>
+
+					<ol className="mx-auto max-w-3xl">
+						{rundownItems.map(renderRundownItem)}
+					</ol>
+				</section>
 
 				<section className="rounded-3xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-100 to-gray-50 p-8 text-center md:p-12">
 					<div className="mx-auto max-w-2xl">
