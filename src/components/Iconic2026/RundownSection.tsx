@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
-import { Sparkles } from "lucide-react";
+import { ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import {
   aaronPraktiknjoPhoto,
   arifHavasPhoto,
@@ -26,6 +26,7 @@ type RundownItem = {
   highlighted?: boolean;
   badge?: string;
   speakers?: Speaker[];
+  presentationTitles?: string[];
 };
 
 type RundownDay = {
@@ -89,8 +90,14 @@ const rundownDays: RundownDay[] = [
         start: "14:15",
         end: "16:05",
         activity: "Financing and Digitalizing the Sustainable Transition",
-        note: "5 Speakers Presentations + Q&A",
+        note: "4 Speakers Presentations + Q&A",
         badge: "Research Panel 1",
+        presentationTitles: [
+          "Islamic Green Finance for Sustainable Palm Oil Farmers in North Sumatra",
+          "The Paradox of Digitalization: A Qualitative Study of Digital Payment Adoption among MSMEs in Non-Urban Areas",
+          "Bridging Technology and Grassroots Development: Equity Crowdfunding as a Catalyst for Village Tourism Governance in Indonesia",
+          "Reimagining Inclusive Value Creation: Halal Marketing as a Catalyst in Indonesia's Circular and Regenerative Digital Economy",
+        ],
       },
       { start: "16:05", end: "16:25", activity: "Coffee Break" },
       {
@@ -99,6 +106,11 @@ const rundownDays: RundownDay[] = [
         activity: "Community-Led Pathways towards the Sustainable Transition",
         note: "3 Speakers Presentations + Q&A",
         badge: "Research Panel 2",
+        presentationTitles: [
+          "Beyond Extraction: Indigenous Organizations and Inclusive Value Creation in Papua's Mining Frontier",
+          "Kiyau Indonesia: Youth-Led Community Empowerment for Regenerative Agriculture in Rural Indonesia",
+          "The Solutionist Promise and Its Discontents: Platform Governance, Asymmetries, and E-Commerce Participation in Indonesia",
+        ],
       },
       { start: "17:35", end: "17:45", activity: "Closing" },
     ],
@@ -120,7 +132,12 @@ const rundownDays: RundownDay[] = [
         end: "10:40",
         activity: "Psychosocial Dimensions of the Sustainable Transition",
         note: "3 Speakers Presentations",
-        badge: "Research Panel 4",
+        badge: "Research Panel 3",
+        presentationTitles: [
+          "Establishing a Gender-Responsive Socio-Spatial Framework: A Proposed Methodology for Assessing Spatial Awareness and Workplace Territoriality in High-Risk Energy Higher Education",
+          "Geographically Weighted Analysis of Psychological Resilience in Ecosystem Sustainability: A Psygeospatial Study of Indonesian Youth",
+          "Unmet Mental Health Service Needs Among Users of a Free Digital Mental Health Screening Platform in Indonesia: A Preliminary Study",
+        ],
       },
       { start: "10:40", end: "10:50", activity: "Coffee Break" },
       {
@@ -138,16 +155,27 @@ const rundownDays: RundownDay[] = [
         end: "16:20",
         activity: "Engineering the Sustainable Transition",
         note: "5 Speakers Presentations",
-        badge: "Research Panel 3",
+        badge: "Research Panel 4",
+        presentationTitles: [
+          "Sustainable Downstream Diversification of Urea-Based Products: Development of Domestic Diesel Exhaust Fluid (DEF) for NOx Emission Reduction and Green Industrial Growth",
+          "Repurposing Decommissioned Offshore Platforms as Hybrid Power Plants: A Circular and Regenerative Pathway for Inclusive Energy Transition in Indonesia",
+          "Dienergia: AIoT-Integrated Closed-Loop Geothermal Power Plant with sCO2–Cu Nanofluid Technology for Low-Emission Development in Dieng Plateau",
+          "EQWISE: Advancing Earthquake Disaster Response Through Geographic Information System Innovation in West Sumatera, Indonesia",
+          "A KNIME Framework for Spatial Mapping of Geo-Organizational Commitment",
+        ],
       },
       { start: "16:20", end: "17:00", activity: "Awarding Ceremony and Closing" },
     ],
   },
 ];
 
-function renderRundownItem(item: RundownItem, index: number) {
+function RundownItemCard({ item }: { item: RundownItem }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const hasPresentationTitles =
+    item.presentationTitles && item.presentationTitles.length > 0;
+
   return (
-    <li key={`${item.start}-${item.activity}-${index}`} className="relative flex gap-4 pb-8 last:pb-0">
+    <li className="relative flex gap-4 pb-8 last:pb-0">
       <div className="flex flex-shrink-0 flex-col items-center">
         <span
           className={`z-10 h-3 w-3 flex-shrink-0 rounded-full ${
@@ -184,6 +212,31 @@ function renderRundownItem(item: RundownItem, index: number) {
               <p className="mt-1 text-sm italic leading-relaxed text-gray-600">
                 {item.note}
               </p>
+            ) : null}
+            {hasPresentationTitles ? (
+              <div className="mt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsExpanded((prev) => !prev)}
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 hover:text-emerald-800"
+                >
+                  {isExpanded
+                    ? "Hide Presentations"
+                    : `View Presentations (${item.presentationTitles!.length})`}
+                  {isExpanded ? (
+                    <ChevronUp className="h-4 w-4" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4" />
+                  )}
+                </button>
+                {isExpanded ? (
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-600">
+                    {item.presentationTitles!.map((title) => (
+                      <li key={title}>{title}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
             ) : null}
           </div>
           {item.speakers && item.speakers.length > 0 ? (
@@ -241,7 +294,9 @@ function RundownSection() {
       </div>
 
       <ol className="mx-auto max-w-3xl">
-        {activeDay.items.map(renderRundownItem)}
+        {activeDay.items.map((item, index) => (
+          <RundownItemCard key={`${item.start}-${item.activity}-${index}`} item={item} />
+        ))}
       </ol>
     </section>
   );

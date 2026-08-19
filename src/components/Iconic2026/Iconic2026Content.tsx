@@ -176,6 +176,28 @@ function Iconic2026Content() {
 
         <RundownSection />
 
+        <section className="rounded-3xl border-2 border-dashed border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 p-8 text-center md:p-12">
+          <div className="mx-auto max-w-2xl">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-200">
+              <Users className="h-8 w-8 text-emerald-700" />
+            </div>
+            <h2 className="mb-3 text-2xl font-bold text-gray-800 md:text-3xl">
+              Participant Registration
+            </h2>
+            <p className="mb-6 text-lg text-gray-600">
+              Register as a participant and secure your spot at ICONIC 2026.
+            </p>
+            <Link
+              href="https://ppij.org/DaftarICONIC26"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-semibold text-white transition-colors hover:bg-emerald-700"
+            >
+              <span>Register as Participant</span>
+            </Link>
+          </div>
+        </section>
+
         <section className="rounded-3xl bg-gradient-to-br from-emerald-50 to-teal-50 p-8 md:p-12">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-2xl font-bold text-gray-800 md:text-3xl">
@@ -234,7 +256,7 @@ function Iconic2026Content() {
               Submission and Reviewer Applications
             </h2>
             <p className="mb-6 text-lg text-gray-600">
-              The portal is open for both abstract submission and reviewer
+              The portal is for both abstract submission and reviewer
               sign-up.
             </p>
             <Link
