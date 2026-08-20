@@ -54,8 +54,7 @@ function ComingSoonPage() {
                                     />
                                 </svg>
                                 <div className="text-base sm:text-lg md:text-xl font-medium">
-                                    <div>Technische Universität München</div>
-                                    <div>Munich, Jerman</div>
+                                    Munich, Germany
                                 </div>
                             </div>
                         </div>
