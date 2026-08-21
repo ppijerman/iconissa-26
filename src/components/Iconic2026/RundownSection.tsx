@@ -66,7 +66,7 @@ const rundownDays: RundownDay[] = [
         end: "11:35",
         activity:
           "Innovation Diplomacy for a Green Economy: Semiconductor Cooperation and Energy Resilience in Indonesia's Digital Transition",
-        note: "By Arif Havas Oegroseno, Vice Minister for the Ministry of Foreign Affairs. Includes Q&A session.",
+        note: "By Arif Havas Oegroseno, Vice Minister for the Ministry of Foreign Affairs.",
         highlighted: true,
         badge: "Keynote Speech",
         speakers: [{ name: "Arif Havas Oegroseno", photo: arifHavasPhoto }],

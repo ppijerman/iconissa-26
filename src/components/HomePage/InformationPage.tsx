@@ -26,10 +26,8 @@ export default function InformationPage() {
 			color: "from-emerald-500 to-teal-600",
 			date: "27th-28th August",
 			location: "EineWeltHaus",
-			hasSubmission: true,
+			hasSubmission: false,
 			detailsUrl: "/iconic-2026",
-			submissionUrl: "https://submission-iconissa.ppijerman.org/",
-			submissionLabel: "Abstract Submission & Reviewer Sign-Up",
 		},
 		{
 			logo: sssLogo,
