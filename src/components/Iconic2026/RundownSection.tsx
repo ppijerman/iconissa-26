@@ -51,7 +51,7 @@ const rundownDays: RundownDay[] = [
       { start: "09:20", end: "10:00", activity: "Opening Ceremony" },
       {
         start: "10:00",
-        end: "11:00",
+        end: "11:15",
         activity:
           "Beyond Carbon: Integrating Environmental, Social, and Economic Dimension for Indonesia's Green Transition",
         note: "By Prof. Dr. Marzia Traverso, Director and Full Professor of Institute of Sustainability in Civil Engineering (INaB) at RWTH Aachen University. Includes Q&A session.",
@@ -61,16 +61,7 @@ const rundownDays: RundownDay[] = [
           { name: "Prof. Dr. Marzia Traverso", photo: marziaTraversoPhoto },
         ],
       },
-      {
-        start: "11:00",
-        end: "11:35",
-        activity:
-          "Innovation Diplomacy for a Green Economy: Semiconductor Cooperation and Energy Resilience in Indonesia's Digital Transition",
-        note: "By Arif Havas Oegroseno, Vice Minister for the Ministry of Foreign Affairs.",
-        highlighted: true,
-        badge: "Keynote Speech",
-        speakers: [{ name: "Arif Havas Oegroseno", photo: arifHavasPhoto }],
-      },
+      {start: "11:15", end: "11:35", activity: "Coffee Break"},
       {
         start: "11:35",
         end: "12:35",
@@ -85,9 +76,19 @@ const rundownDays: RundownDay[] = [
           { name: "Dr. Noor Titan Hartono", photo: noorTitanPhoto },
         ],
       },
-      { start: "12:35", end: "14:15", activity: "Lunch" },
+      { start: "12:35", end: "14:00", activity: "Lunch" },
       {
-        start: "14:15",
+        start: "14:00",
+        end: "14:35",
+        activity:
+          "Innovation Diplomacy for a Green Economy: Semiconductor Cooperation and Energy Resilience in Indonesia's Digital Transition",
+        note: "By Arif Havas Oegroseno, Vice Minister for the Ministry of Foreign Affairs.",
+        highlighted: true,
+        badge: "Keynote Speech",
+        speakers: [{ name: "Arif Havas Oegroseno", photo: arifHavasPhoto }],
+      },
+      {
+        start: "14:35",
         end: "16:05",
         activity: "Financing and Digitalizing the Sustainable Transition",
         note: "4 Speakers Presentations + Q&A",
