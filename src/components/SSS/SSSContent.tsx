@@ -1,6 +1,5 @@
 import { sssLogo, websiteIcon } from "@/src/assets";
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { CalendarDays, MapPin, Store, FileUser, Utensils } from "lucide-react";
 import CulturalDishesMenu from "@/src/components/SSS/CulturalDishesMenu";
@@ -245,29 +244,25 @@ function SSSContent() {
 							Event Forms
 						</h2>
 						<div className="flex flex-col items-center">
-							<Link
-								href="https://ppij.org/SSS-Registration"
-								target="_blank"
-								rel="noreferrer"
-								className="w-2/3 mb-6 flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-6 py-4 font-semibold text-white transition-colors hover:bg-cyan-700"
+							<span
+								aria-disabled="true"
+								className="w-2/3 mb-6 flex items-center justify-center gap-2 rounded-xl bg-gray-300 px-6 py-4 font-semibold text-gray-500 cursor-not-allowed"
 							>
-								<FileUser />
+								<FileUser className="opacity-50" />
 								<span className="w-fit">
-									Click here to register!
+									Registration Closed
 								</span>
-							</Link>
+							</span>
 
-							<Link
-								href="https://ppij.org/SSS-Preorder"
-								target="_blank"
-								rel="noreferrer"
-								className="w-2/3 flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-6 py-4 font-semibold text-white transition-colors hover:bg-cyan-700"
+							<span
+								aria-disabled="true"
+								className="w-2/3 flex items-center justify-center gap-2 rounded-xl bg-gray-300 px-6 py-4 font-semibold text-gray-500 cursor-not-allowed"
 							>
-								<Utensils />
+								<Utensils className="opacity-50" />
 								<span className="w-fit">
-									Click here to preorder our cultural dishes!
+									Preorders Closed
 								</span>
-							</Link>
+							</span>
 						</div>
 					</div>
 				</section>

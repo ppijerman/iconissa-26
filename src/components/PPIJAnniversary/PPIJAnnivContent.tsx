@@ -9,10 +9,8 @@ import {
   ppij70thLogo,
 } from "@/src/assets";
 import Image, { type StaticImageData } from "next/image";
-import { useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { CalendarDays, Instagram, MapPin, ShoppingCart } from "lucide-react";
-import Script from "next/script";
-import Dialog from "../ui/Dialog";
 
 type AnniversaryDetail = {
   description: string;
@@ -269,37 +267,8 @@ function renderPerformerCard(performer: Performer) {
 }
 
 function PPIJAnnivContent() {
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-
   return (
     <section className="relative overflow-hidden px-4 py-12 md:px-6 md:py-20">
-      <Dialog
-        onClose={() => {
-          setModalOpen(false);
-        }}
-        open={modalOpen}
-      >
-        <div className="tt-widget">
-          <div className="tt-widget-fallback w-full overflow-hidden">
-            <iframe
-              src="https://www.tickettailor.com/checkout/new-session/id/8487958/chk/7c87/?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
-              className="w-full h-[600px] border-0"
-              frameBorder="0"
-            />
-          </div>
-          <Script
-            src="https://cdn.tickettailor.com/js/widgets/min/widget.js"
-            data-url="https://www.tickettailor.com/checkout/new-session/id/8487958/chk/7c87/?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true"
-            data-type="inline"
-            data-inline-minimal="false"
-            data-inline-show-logo="true"
-            data-inline-bg-fill="false"
-            data-inline-inherit-ref-from-url-param=""
-            data-inline-ref="website_widget"
-          />
-        </div>
-      </Dialog>
-
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-[#F5C518]/30 blur-3xl" />
         <div className="absolute right-1/4 top-0 h-96 w-96 rounded-full bg-[#D81E27]/20 blur-3xl" />
@@ -422,15 +391,15 @@ function PPIJAnnivContent() {
             <p className="text-lg text-gray-600 mb-6">
               Early Bird sales begins on the 20th of June, 2026.
             </p>
-            <div
-              onClick={() => {
-                setModalOpen(true);
-              }}
-              className="inline-flex items-center gap-2 rounded-xl bg-[#D81E27] px-6 py-4 font-semibold text-white transition-colors hover:bg-[#A8161D]"
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="inline-flex items-center gap-2 rounded-xl bg-gray-300 px-6 py-4 font-semibold text-gray-500 cursor-not-allowed"
             >
-              <ShoppingCart />
-              <button>Buy Tickets</button>
-            </div>
+              <ShoppingCart className="opacity-50" />
+              Ticket Sales Closed
+            </button>
           </div>
         </section>
       </div>
