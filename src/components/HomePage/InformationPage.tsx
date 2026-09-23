@@ -123,15 +123,15 @@ export default function InformationPage() {
 
 									{/* Event Content */}
 									<div className="min-w-0 flex-1 space-y-2 md:space-y-3">
-										<h3 className="text-center text-xl font-bold leading-tight text-gray-800 transition-colors group-hover:text-emerald-700 lg:text-[1.75rem] xl:text-2xl">
+										<h3 className="text-left text-xl font-bold leading-tight text-gray-800 transition-colors group-hover:text-emerald-700 lg:text-[1.75rem] xl:text-2xl">
 											{event.title}
 										</h3>
 
-										<h4 className="text-base font-medium text-gray-700 text-center lg:text-[1.2rem] xl:text-lg">
+										<h4 className="text-base font-medium text-gray-700 text-left lg:text-[1.2rem] xl:text-lg">
 											{event.date} @ {event.location}
 										</h4>
 
-										<p className="text-center text-sm leading-relaxed text-gray-600 lg:text-[0.95rem] xl:text-base">
+										<p className="text-left text-sm leading-relaxed text-gray-600 lg:text-[0.95rem] xl:text-base">
 											{event.subtitle}
 										</p>
 

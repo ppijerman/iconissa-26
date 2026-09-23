@@ -1,6 +1,5 @@
 import { iconissaLogo, websiteIcon } from "@/src/assets";
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import {
   CalendarDays,
@@ -187,14 +186,12 @@ function Iconic2026Content() {
             <p className="mb-6 text-lg text-gray-600">
               Register as a participant and secure your spot at ICONIC 2026.
             </p>
-            <Link
-              href="https://ppij.org/DaftarICONIC26"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-semibold text-white transition-colors hover:bg-emerald-700"
+            <span
+              aria-disabled="true"
+              className="inline-flex items-center gap-2 rounded-xl bg-gray-300 px-6 py-4 font-semibold text-gray-500 cursor-not-allowed"
             >
-              <span>Register as Participant</span>
-            </Link>
+              Registration Closed
+            </span>
           </div>
         </section>
 
@@ -259,20 +256,18 @@ function Iconic2026Content() {
               The portal is for both abstract submission and reviewer
               sign-up.
             </p>
-            <Link
-              href="https://submission-iconissa.ppijerman.org/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-semibold text-white transition-colors hover:bg-emerald-700"
+            <span
+              aria-disabled="true"
+              className="inline-flex items-center gap-2 rounded-xl bg-gray-300 px-6 py-4 font-semibold text-gray-500 cursor-not-allowed"
             >
               <Image
                 src={websiteIcon}
                 alt=""
                 aria-hidden="true"
-                className="h-5 w-5 object-contain brightness-0 invert"
+                className="h-5 w-5 object-contain opacity-50"
               />
-              <span>Abstract Submission &amp; Reviewer Portal</span>
-            </Link>
+              <span>Submission Closed</span>
+            </span>
           </div>
         </section>
       </div>
